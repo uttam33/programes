@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	clrscr();
+int a=50,b=60;
+printf("before swap a=%d,b=%d",a,b);
+a=a+b;
+b=a-b;
+a=a-b;
+printf("\n after swap a=%d,b=%d",a,b);
+return 0;
+getch();
+	
+}
