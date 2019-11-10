@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+float p,t,r,si;
+   
+    printf("Enter Principle, Rate of interest & Time :");
+    scanf("%f%f%f",&p,&r,&t);
+    si=(p*r*t)/100;
+    printf("Simple Interest is :%f",si);
+    getch();
+    return 0;
+}
