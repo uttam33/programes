@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int omta;
+	printf("enter your choice\n");
+	scanf("%d",&omta);
+	switch(omta)
+	{
+	case 1: printf("sunday\n",omta);
+	break;
+	case 2: printf("monday\n",omta);
+	break;
+	case 3: printf("tuesday\n",omta);
+	break;
+	case 4: printf("wednesday\n",omta);
+	break;
+	case 5: printf("thursday\n",omta);
+	break;
+	case 6:printf("friday\n",omta);
+	break;
+	case 7: printf("saturday\n",omta);
+	break;
+	default : printf("INVALID CHOICE");
+}
+	getch();
+	return 0;
+}
