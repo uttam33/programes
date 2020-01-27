@@ -6,5 +6,6 @@ int main()
  printf("Enter mark: ");
  scanf("%d", &mark);
  puts(mark >= 40 ? "Passed" : "Failed");
+ getch();
  return 0;
 }
