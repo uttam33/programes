@@ -1,0 +1,9 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{	
+printf("the sum of 30 and 40 is %d",30+40);
+scanf("%d%d",30,40);
+getch();
+return 0;	
+}
