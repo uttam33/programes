@@ -40,5 +40,6 @@ int main()
     }
  
     printf("Result: %d %c %d = %f\n",num1,ch,num2,result);
+    getch();
     return 0;
 }
