@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+#include<sys/stat.h>
+int main()
+{
+	FILE *fp;
+	struct stat st;
+	char *filename="uttam.txt";
+	int flag;
+flag=stat(filename,&st);
+if(!flag)
+printf("file is exist");
+else
+printf("file does not exist");
+getch();
+return 0;
+	}
