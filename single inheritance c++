@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+class base
+{
+	public:
+	int x;
+	void getdata()
+	{
+	cout<<"enter value of x:"<<endl;
+	cin>>x;
+	}	
+};
+class derive:public base
+{
+	public:
+	int y;
+	void readdata()
+	{
+	cout<<"enter value of y:"<<endl;
+	cin>>y;
+    }
+    void product()
+    {
+    	cout<<"product of"<<" "<<x<<" and"<< " "<<y<<" is:"<<x*y;
+	}
+};
+int main()
+{
+	derive a;
+	a.getdata();
+	a.readdata();
+	a.product();
+	return 0;
+	}
