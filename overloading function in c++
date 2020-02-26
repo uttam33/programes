@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+class cal
+{
+	public:
+	int add (int a,int b)
+	{
+	return a+b;	
+	}	
+	int add (int a, float b)
+	{
+		return a+b;
+	}
+	int add (int a,int b,int c)
+	{
+		return a+b+c;
+	}
+	int add (int a,int b,float c)
+	{
+		return a+b+c;
+	}
+};
+int main()
+{
+	cal c;
+	cout<<"sum of two integer:"<<c.add(20,30)<<endl;
+	cout<<"sum of one integer and one float:"<<c.add(12.2,13)<<endl;
+	cout<<"sum of three integer:"<<c.add(12,13,14)<<endl;
+	cout<<"sum of two integer and one float:"<<c.add(13,12,14)<<endl;
+	return 0;
+	}
