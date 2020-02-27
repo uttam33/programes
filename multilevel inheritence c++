@@ -1,0 +1,70 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+class person
+{
+public:
+char name[100],gender[10];
+int age;
+void getdata()
+{
+cout<<"\n\nName:"<<endl;
+cin>>name;
+cout<<"\n\nGender:"<<endl;
+cin>>gender;
+cout<<"\n\nAge:"<<endl;
+cin>>age;
+}
+void display()
+{
+cout<<"\n\nName:"<<name<<endl;
+cout<<"\n\nGender:"<<gender<<endl;
+cout<<"\n\nAge:"<<age<<endl;
+}
+};
+class employee:public person
+{
+public:
+char company[100];
+float salary;
+void getdata()
+{
+person::getdata();
+cout<<"\n\nname of company:"<<endl;
+cin>>company;
+cout<<"\n\nsalary:rs "<<endl;
+cin>>salary;
+}
+void display()
+{
+person::display();
+cout<<"\n\nname of company:"<<company<<endl;
+cout<<"\n\nsalary:rs "<<salary<<endl;
+}
+};
+class programmer:public employee
+{
+public:
+int number;
+void getdata()
+{
+employee::getdata();
+cout<<"\n\nnumber of programming language are known:"<<endl;
+cin>>number;
+}
+void display()
+{
+employee::display();
+cout<<"\n\nnumber of programming language are known:"<<number<<endl;
+}
+};
+void main()
+{
+clrscr();
+programmer p;
+cout<<"Enter data:"<<endl;
+p.getdata();
+cout<<"\n\nDisplaying data:"<<endl;
+p.display();
+getch();
+}
