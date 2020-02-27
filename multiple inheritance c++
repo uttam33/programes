@@ -1,0 +1,44 @@
+#include<iostream.h>
+#include<conio.h>
+class stud
+{
+public:
+int roll,m1,m2;
+void get()
+{
+cout<<"\nenter roll no."<<endl;
+cin>>roll;
+cout<<"\nenter the highest marks:"<<endl;
+cin>>m1>>m2;
+}
+};
+class extracurriculam
+{
+public:
+int xm;
+void getsm()
+{
+cout<<"\nenter the marks of extra curriculam activities:"<<endl;
+cin>>xm;
+}
+};
+class object:public stud ,public extracurriculam
+{
+public:
+int tot,avg;
+void display()
+{
+tot=m1+m2+xm;
+avg=tot/3;
+cout<<"\n\Roll no."<<roll<<"\n\ntotal marks:"<<tot<<"\n\naverage marks:"<<avg<<endl;
+}
+};
+void main()
+{
+clrscr();
+object o;
+o.get();
+o.getsm();
+o.display();
+getch();
+}
