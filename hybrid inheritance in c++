@@ -1,0 +1,71 @@
+#include<iostream.h>
+#include<conio.h>
+class student
+{
+public:
+int roll;
+void getnumber()
+{
+cout<<"please enter roll no."<<endl;
+cin>>roll;
+}
+void putnumber()
+{
+cout<<"RollNo."<<roll<<endl;
+}
+};
+class test : public virtual student
+{
+public:
+int p1,p2;
+void getmarks()
+{
+cout<<"enter marks:"<<endl;
+cout<<"Part 1:"<<endl;
+cin>>p1;
+cout<<"Part 2:"<<endl;
+cin>>p2;
+}
+void putmarks()
+{
+cout<<"Part 1:"<<p1<<endl;
+cout<<"Part 2:"<<p2<<endl;
+}
+};
+class sport:virtual public student
+{
+public:
+int score;
+void getscore()
+{
+cout<<"please enter sport score"<<endl;
+cin>>score;
+}
+void putscore()
+{
+cout<<"sport score:"<<score<<endl;
+}
+};
+class result:public test,public sport
+{
+public:
+int total;
+void display()
+{
+total=p1+p2+score;
+putnumber();
+putmarks();
+putscore();
+cout<<"Total Score:"<<total<<endl;
+}
+};
+void main()
+{
+clrscr();
+result obj;
+obj.getnumber();
+obj.getmarks();
+obj.getscore();
+obj.display();
+getch();
+}
