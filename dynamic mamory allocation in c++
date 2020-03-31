@@ -1,0 +1,13 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+clrscr();
+double *pvalue=NULL;
+pvalue=new double;
+cout<<"enter the value"<<endl;
+cin>>*pvalue;
+cout<<"value of pvalue"<<*pvalue<<endl;
+delete pvalue;
+getch();
+}
