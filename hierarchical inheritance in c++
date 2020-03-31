@@ -1,0 +1,74 @@
+#include<iostream.h>
+#include<conio.h>
+class member
+{
+public:
+char gender[10];
+int age;
+void getdata()
+{
+cout<<"\nenter gender:"<<endl;
+cin>>gender;
+cout<<"\nenter age:"<<endl;
+cin>>age;
+}
+void display()
+{
+cout<<"\nGender:"<<gender<<endl;
+cout<<"\nAge:"<<age<<endl;
+}
+};
+class stud:public member
+{
+public:
+char level[20];
+void getdata()
+{
+member::getdata();
+cout<<"\nenter class "<<endl;
+cin>>level;
+}
+void display()
+{
+member::display();
+cout<<"\nclass:"<<level<<endl;
+}
+};
+class staff:public member
+{
+public:
+float salary;
+void getdata()
+{
+member::getdata();
+cout<<"\nenter salary:"<<endl;
+cin>>salary;
+}
+void display()
+{
+member::display();
+cout<<"\nSalary:"<<salary<<endl;
+}
+};
+void main()
+{
+clrscr();
+member m;
+staff st;
+stud s;
+cout<<"\nEnter data:"<<endl;
+cout<<"\nstudent:"<<endl;
+s.getdata();
+cout<<"\n\nEnter data:"<<endl;
+cout<<"\nStaff Data:"<<endl;
+st.getdata();
+cout<<"_________________"<<endl;
+cout<<"\nDisplaying student data:"<<endl;
+s.display();
+cout<<"_________________"<<endl;
+cout<<endl<<"\nDisplaying staff Data:"<<endl;
+st.display();
+getch();
+}
+
+
