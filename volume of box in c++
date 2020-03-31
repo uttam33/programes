@@ -1,0 +1,52 @@
+#include<iostream.h>
+#include<conio.h>
+class Box
+{
+public:
+double length;
+double breath;
+double height;
+double getvolume();
+void setlength(double len);
+void setbreath(double bre);
+void setheight(double hei);
+};
+double Box::getvolume()
+{
+return length*breath*height;
+}
+void Box::setlength(double len)
+{
+length=len;
+}
+void Box::setbreath(double bre)
+{
+breath=bre;
+}
+void Box::setheight(double hei)
+{
+height=hei;
+}
+void main()
+{
+clrscr();
+Box Box1;
+Box Box2;
+double volume=0.0;
+
+Box1.setlength(6.0);
+Box1.setbreath(7.0);
+Box1.setheight(8.0);
+
+Box2.setlength(12.0);
+Box2.setbreath(13.0);
+Box2.setheight(14.0);
+
+volume=Box1.getvolume();
+cout<<"volume of Box1:"<<volume<<endl;
+
+volume=Box2.getvolume();
+cout<<"volume of Box2:"<<volume<<endl;
+getch();
+}
+
