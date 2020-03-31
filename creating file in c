@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<conio.h>
+#include<sys\stat.h>
+void main()
+{
+FILE *fp;
+struct stat st;
+char *filename = "UTTAM.txt";
+int flag;
+clrscr();
+flag=stat(filename,&st);
+if(!flag)
+{
+printf("file already exist.\n");
+}
+else
+printf("file does not exist.\n");
+fp=fopen(filename,"w");
+if(fp==NULL)
+{
+printf("%s can not be exist.\n",filename);
+}
+else
+{
+printf("file %s is created.\n",filename);
+}
+if(!fclose(fp))
+printf("file %s is closed.\n",filename);
+flag=stat(filename,&st);
+if(!flag)
+{
+printf("file exist.\n");
+}
+else
+printf("file does not exist.\n");
+getch();
+}
