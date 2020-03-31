@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+struct student
+{
+int id;
+char name[30];
+float percentage;
+};
+int main()
+{
+	int i;
+	struct student record[3];
+	char n[10];
+	for(i=0;i<3;i++)
+	{
+		printf("\nenter record of student 1\n",i+1);
+		printf("\nenter the student id :\n");
+		scanf("%d",&record[i].id);
+		printf("\nenter the name of student :\n");
+		fflush(stdin);
+		gets(record[i].name);
+		printf("enter the percentage of student : \n");
+		scanf("%f",&record[i].percentage);
+	}
+	for(i=0;i<3;i++)
+	{
+		printf("\n\n\n record of student : %d\n",i+1);
+		printf("id is : %d\n",record[i].id);
+		printf("name is	 : %s\n",record[i].name);
+		printf("percentage is : %f\n",record[i].percentage);
+	}
+	return 0;
+	getch();
+}
