@@ -1,0 +1,15 @@
+#include<iostream.h>
+#include<conio.h>
+template <class t>
+t mymax(t x,t y)
+{
+return(x>y)?x:y;
+}
+void main()
+{
+clrscr();
+cout<<mymax(3,7)<<endl;
+cout<<mymax(3.3,7.2)<<endl;
+cout<<mymax('u','p')<<endl;
+getch();
+}
