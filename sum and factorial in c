@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+void add();
+void fact();
+clrscr();
+add();
+fact();
+getch();
+}
+void add()
+{
+int a,b,c;
+printf("enter two numbers\n");
+scanf("%d%d",&a,&b);
+c=a+b;
+printf("sum is = %d\n",c);
+}
+void fact()
+{
+int a,i,f=1;
+printf("enter any integer\n");
+scanf("%d",&a);
+for(i=1;i<=a;i++)
+f=f*i;
+printf("factorial is = %d\n",f);
+}
