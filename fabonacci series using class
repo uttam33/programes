@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+ class fabonacci
+	{
+		 public:
+		 	int a,b,c;
+		 	void generate(int);
+		 
+	};
+	void fabonacci::generate(int n)
+	{
+		a=0;
+		b=1;
+		cout<< a <<" "<< b;
+		for(int i=1;i<=n-2;i++)
+		{
+			c=a+b;
+			cout<<" "<<c;
+			a=b;
+			b=c;
+		}
+	}
+	int main()
+	{
+		int n;
+		cout<<"enter the length of fabonacci series:"<<endl;
+		cin>>n;
+		fabonacci f;
+		f.generate(n);
+		return 0;
+	}
